@@ -1,4 +1,17 @@
-async function() {
+// ==UserScript==
+// @name	Mercator Matrix for Google Meet
+// @version	1.1
+// @description	You don't even see the code. All you see is yourself.
+// @author	Xing <dev@x-ing.space> (https://x-ing.space)
+// @copyright	2020-2021, Xing (https://x-ing.space)
+// @license	MIT License; https://x-ing.space/mercator/LICENSE
+// @namespace	https://x-ing.space
+// @homepageURL	https://x-ing.space/mercator-matrix
+// @icon	https://x-ing.space/mercator-matrix/icon.png
+// @match	https://meet.google.com/*
+// @grant	none
+// ==/UserScript==
+(async function() {
 	'use strict'
 
 	const video = document.createElement('video')
@@ -135,4 +148,4 @@ async function() {
 	MediaDevices.prototype.oldGetUserMedia = MediaDevices.prototype.getUserMedia
 	MediaDevices.prototype.getUserMedia = newGetUserMedia
 
-}
+})()
